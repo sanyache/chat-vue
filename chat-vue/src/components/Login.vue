@@ -29,7 +29,7 @@
                 success: (response) => {
                     alert('Дякуємо, що ви з нами !')
                     sessionStorage.setItem('auth_token', response.data.attributes.auth_token)
-                    console.log(response.data.attributes.auth_token)
+                    this.$router.push({name: 'home'})
                 },
                 error: (response) => {
                     if (response.status === 400)
@@ -43,4 +43,4 @@
 
 <style>
 
-<style>
+</style>
